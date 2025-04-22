@@ -26,4 +26,13 @@ fn main() {
     assert_eq!(decrypted_result, clear_result);
 
     utils::greet("World");
+
+    // key generation
+    let key = [0x2b, 0x7e, 0x15, 0x16, 0x28, 0xae, 0xd2, 0xa6, 0xab, 0xf7, 0x15, 0x88, 0x09, 0xcf, 0x4f, 0x3c];
+
+    let round_keys = utils::generate_round_keys(&key);
+
+    println!("Round keys: {:?}", round_keys);
+
+
 }
